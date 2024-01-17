@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fefefe;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    color: #fff;
+}
+
+header {
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: start;
+}
+header img {
+    width: 200px;
+    box-align: left;
+    padding: 2px;
+}
+
+.grad {
+    background-image: linear-gradient(to right, purple , blue);
+}
+
+
+header h1 {
+    margin: 0;
+    
+}
+
+section {
+    padding: 40px 0;
+}
+body {
+    background-image: url("jack-gittoes.jpg");
+    height: fit-content;
+
+  }
+
+.project {
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+.project {
+    background-image: linear-gradient(to right , black, rgb(25, 0, 96));
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+h2 {
+    color: #fff;
+}
+
+p {
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fae100;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;   
+}
+
+.git {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0px 10px    ;
+    background-color: #444440b0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;   
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
