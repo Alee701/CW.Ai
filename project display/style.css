@@ -13,31 +13,32 @@ body {
 }
 
 header {
-    color: #ffffff;
     padding: 20px 0;
     text-align: start;
+    
 }
+.grad p {
+    color: #333;
+}
+
 header img {
-    width: 200px;
+    height: 50px;
     box-align: left;
-    padding: 2px;
+    margin: 10px 0px -20px -23px;
+   
 }
 
 .grad {
-    background-image: linear-gradient(to right, purple , blue);
+    background-image: linear-gradient(to right, white , rgb(176, 176, 176));
+
 }
 
-
-header h1 {
-    margin: 0;
-    
-}
 
 section {
     padding: 40px 0;
 }
 body {
-    background-image: url("jack-gittoes.jpg");
+    background-image: url("main web assets/jack-gittoes.jpg");
     height: fit-content;
 
   }
@@ -75,10 +76,15 @@ p {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #fae100;
+    background-color: #00369A;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;   
+}
+.btn:hover {
+    color: white;
+    background-image: linear-gradient(to right, purple , blue);
+    
 }
 
 .git {
@@ -90,7 +96,11 @@ p {
     text-decoration: none;
     border-radius: 5px;   
 }
+.git:hover {
+    color: white;
+    background-image: linear-gradient(to right, purple , green);
 
+}
 
 footer {
     background-color: #333;
