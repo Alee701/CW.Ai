@@ -83,7 +83,7 @@ p {
 }
 .btn:hover {
     color: white;
-    background-image: linear-gradient(to right, purple , blue);
+    background-image: linear-gradient(to right, blue, black);
     
 }
 
@@ -98,7 +98,7 @@ p {
 }
 .git:hover {
     color: white;
-    background-image: linear-gradient(to right, purple , green);
+    background-image: linear-gradient(to right, rgb(255, 6, 6) , rgb(146, 4, 4));
 
 }
 
