@@ -92,10 +92,11 @@ img {
 
  
 .labelbox {
-    margin-left: 10%;
+    
     padding: 12px;
     height: 56px;
-    align-items: center;
+    align-content: center;
+    justify-content: center;
     box-sizing: border-box;
     background: #0c2461;
     border-radius: 4px;
@@ -104,8 +105,8 @@ img {
     
 
 }
-.inner {
-    display: flex;
+.inner p{
+    display: inline-block;
     position: relative;
     align-items: center;
     color: #fff;
