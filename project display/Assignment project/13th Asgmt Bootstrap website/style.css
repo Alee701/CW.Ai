@@ -1,11 +1,10 @@
-/* Reset styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Global styles */
 body {
     font-family: Aldrich, Arial, sans-serif;
     background-color: #f4f4f4;
@@ -49,6 +48,9 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     
+}
+section {
+    width: 100%;
 }
 
 .images img {
