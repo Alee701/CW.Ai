@@ -43,12 +43,20 @@ body {
     flex-wrap: wrap;
 }
 
-
-
 .images {
-   height: 280px;
-   margin: 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+section {
+    width: 100%;
+}
 
+.images img {
+   flex-wrap: wrap;
+   height: 280px;
+   margin: 10px 0;
 }
 
 .footer {
@@ -81,6 +89,3 @@ body {
     gap: 15px;
     
 }
-
-
-
