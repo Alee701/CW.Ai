@@ -8,11 +8,14 @@ body {
 
 
 header {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(86, 81, 81, 0.222);
     backdrop-filter: blur(10px);
-    padding: 20px 0;
+    padding: 25px 0;
     margin-bottom: 40px;
+    top: 0;
     position: fixed;
+    z-index: 2;
+    width: 100%;
 }
 
 .nav-container {
@@ -40,15 +43,19 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
     font-weight: bold;
+    color: #fff;
 }
 
 .social-icons a {
     margin-left: 20px;
 }
 
-
+.main-container{
+    position: relative;
+    top: 120px;
+    z-index: 1;
+}
 
 
 .m-co {
@@ -106,7 +113,7 @@ p {
 
 .git {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px;
     margin: 0px 10px    ;
     background-color: #444440b0;
     color: #fff;
@@ -129,4 +136,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    margin-top: 150px;
+    position: relative;
+    bottom: 0;
+    z-index: 2;
 }
