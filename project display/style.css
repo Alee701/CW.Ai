@@ -3,64 +3,80 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #fefefe;
+    background-image: url("main web assets/background.png");
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    color: #fff;
-}
 
 header {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     padding: 20px 0;
-    text-align: start;
-    
-    
-}
-.grad p {
-    color: #333;
+    margin-bottom: 40px;
+    position: fixed;
 }
 
-header img {
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
     height: 50px;
-    box-align: left;
-    margin: 10px 0px -20px -23px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.social-icons a {
+    margin-left: 20px;
+}
+
+
+
+
+.m-co {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contain {
+    margin: auto;
+    width: 40%;
    
 }
-
-.grad {
-    background-image: linear-gradient(to right, white , rgb(176, 176, 176));
-
-}
-
-
-section {
-    padding: 40px 0;
-}
-body {
-    background-image: url("main web assets/jack-gittoes.jpg");
-    height: fit-content;
-
-  }
-
 .project {
-    margin-bottom: 40px;
+    width: 80vh;
+    margin: 10px auto;
     border: 1px solid #ddd;
     overflow: hidden;
     border-radius: 8px;
     color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
     
-}
 .project {
     background-image: linear-gradient(to right , black, rgb(25, 0, 96));
 }
 
-.project img {
-    width: 100%;
-    height: auto;
-}
+
 
 .project-info {
     padding: 20px;
@@ -76,7 +92,7 @@ p {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: #00369A;
     color: #fff;
     text-decoration: none;
@@ -84,13 +100,13 @@ p {
 }
 .btn:hover {
     color: white;
-    background-image: linear-gradient(to right, blue, black);
+    background-image: linear-gradient(to right, rgba(1, 1, 246, 0.841), rgba(43, 60, 240, 0.84));
     
 }
 
 .git {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin: 0px 10px    ;
     background-color: #444440b0;
     color: #fff;
@@ -102,6 +118,10 @@ p {
     background-image: linear-gradient(to right, rgb(255, 6, 6) , rgb(146, 4, 4));
 
 }
+#main-git {
+    width: 200px;
+    background-color: black;  
+}    
 
 
 footer {

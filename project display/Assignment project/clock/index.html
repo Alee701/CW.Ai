@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Clock</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay loop muted class="fullscreen-video">
+      <source src="video.mp4" type="video/mp4"> 
+    </video>
+    
+    <div class="container">
+      <!-- Clock Container -->
+      <div class="clock-container">
+        <div class="clock">
+          <h1 class="title">NEW YORK GMT-4</h1>
+          <!-- Time Display -->
+          <div class="time">
+            <div class="hour" id="hour">12</div>
+            <div class="separator">:</div>
+            <div class="minute" id="minute">00</div>
+            <div class="separator">:</div>
+            <div class="second" id="second">00</div>
+            <div class="ampm" id="ampm">AM</div>
+          </div>
+          <!-- Date Display -->
+          <div class="date" id="date">May 2, 2024</div>
+          
+        </div>
+        
+      </div>
+      <p>NEW YORK TIME</p>
+    </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
