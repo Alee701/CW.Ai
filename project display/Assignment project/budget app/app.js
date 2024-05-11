@@ -7,15 +7,21 @@ function addEntry() {
     const month = document.getElementById('month').value;
     const revenue = parseFloat(document.getElementById('revenue').value);
     const expense = parseFloat(document.getElementById('expense').value);
+    const transactionType = revenue ? 'income' : (expense ? 'expense' : '');
 
     // Data Validation
-    if (!month || isNaN(revenue) || isNaN(expense)) {
+    if (!month || (isNaN(revenue) && isNaN(expense))) {
         alert('Please fill in all fields with valid data.');
         return;
     }
 
     // Calculate saving
-    const saving = revenue - expense;
+    let saving;
+    if (transactionType === 'income') {
+        saving = revenue;
+    } else if (transactionType === 'expense') {
+        saving = -expense;
+    }
 
     // Check if the month already exists
     if (!monthlyData[month]) {
@@ -23,7 +29,7 @@ function addEntry() {
     }
 
     // Add entry to monthly data
-    monthlyData[month].push({ revenue, expense, saving });
+    monthlyData[month].push({ transactionType, revenue, expense, saving });
 
     // Clear input fields after adding entry
     document.getElementById('month').value = '';
@@ -44,6 +50,7 @@ function renderMonthlyList() {
         entries.forEach(entry => {
             const row = document.createElement('tr');
             row.innerHTML = `
+                <td>${entry.transactionType}</td>
                 <td>${month}</td>
                 <td>${entry.revenue}</td>
                 <td>${entry.expense}</td>
@@ -63,7 +70,7 @@ function calculateTotalSaving() {
         });
     }
     totalSavingInput.value = totalSaving.toFixed(2);
-    
+
     // Console message based on total saving
     if (totalSaving > 0) {
         showMessage('Congratulations! You have saved: ' + totalSaving.toFixed(2) + ' PKR', 'success');
@@ -75,10 +82,10 @@ function calculateTotalSaving() {
 }
 
 function exportToCSV() {
-    const csvContent = "data:text/csv;charset=utf-8,"
-        + Object.keys(monthlyData).map(month =>
+    const csvContent = "data:text/csv;charset=utf-8," +
+        Object.keys(monthlyData).map(month =>
             monthlyData[month].map(entry =>
-                `${month},${entry.revenue},${entry.expense},${entry.saving}`
+                `${entry.transactionType},${month},${entry.revenue},${entry.expense},${entry.saving}`
             ).join('\n')
         ).join('\n');
 

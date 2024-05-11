@@ -19,6 +19,7 @@
             <input type="month" id="month" placeholder="Month">
             <input type="number" id="revenue" placeholder="Revenue (PKR)">
             <input type="number" id="expense" placeholder="Expense (PKR)">
+            
             <button onclick="addEntry()">Add Entry</button>
         </div>
         <div class="monthly-list">
@@ -26,6 +27,7 @@
             <table style="background-color: rgba(255, 255, 255, 0.664);" id="monthly-entries">
                 <thead>
                     <tr>
+                        <th>Transaction Type</th>
                         <th>Month</th>
                         <th>Revenue (PKR)</th>
                         <th>Expense (PKR)</th>
@@ -37,20 +39,14 @@
                 </tbody>
             </table>
         </div>
-        <div class="console" id="console-messages">
-
-        </div>
+        <div class="console" id="console-messages"></div>
         <div class="center-box">
             <input type="number" id="total-saving" placeholder="Total Saving (PKR)" disabled>
             <button class="export" onclick="exportToCSV()">Export as CSV</button>
         </div>
     </div>
 
-    
-
-
-      
-      
+          
 <script src="app.js"></script>
 
 </body>
