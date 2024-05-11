@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthly Income and Savings Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Monthly Revenue and Expense Tracker</h1>
+        <p>Developed and Designed by Ali Imran</p>
+        <div class="entry-form">
+            <label style="color: white; margin-left: 7px;" for="month">Select Month: </label>
+            <input type="month" id="month" placeholder="Month">
+            <input type="number" id="revenue" placeholder="Revenue (PKR)">
+            <input type="number" id="expense" placeholder="Expense (PKR)">
+            <button onclick="addEntry()">Add Entry</button>
+        </div>
+        <div class="monthly-list">
+            <h2 style="color: white;">Monthly Entries</h2>
+            <table style="background-color: rgba(255, 255, 255, 0.664);" id="monthly-entries">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Revenue (PKR)</th>
+                        <th>Expense (PKR)</th>
+                        <th>Saving (PKR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Monthly entries will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="console" id="console-messages">
+
+        </div>
+        <div class="center-box">
+            <input type="number" id="total-saving" placeholder="Total Saving (PKR)" disabled>
+            <button class="export" onclick="exportToCSV()">Export as CSV</button>
+        </div>
+    </div>
+
+    
+
+
+      
+      
+<script src="app.js"></script>
+
+</body>
+</html>

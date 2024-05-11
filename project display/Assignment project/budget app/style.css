@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(72, 71, 71, 0.552);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: azure;
+    font-weight: 900;
+}
+
+p {
+    text-align: center;
+    color: azure;
+    margin-bottom: 20px;    
+}
+
+.entry-form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+button {
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.export:hover {
+    background-color: #0d8402;
+}
+
+.monthly-list {
+    margin-bottom: 20px;
+}
+
+.monthly-list h2 {
+    text-align: center;
+    color: #333;
+}
+
+#monthly-entries {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#monthly-entries th, #monthly-entries td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#monthly-entries th {
+    background-color: #f2f2f2;
+}
+
+#monthly-entries tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.center-box {
+    text-align: center;
+}
+
+input[type="number"] {
+    text-align: center;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    
+}
+input[type="month"] {
+    margin-left: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+
+
+#total-saving {
+    font-size: 15px;
+    margin: auto;
+    color: #fff;
+    background-color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    }
+
+.export {
+    background-color: rgb(4, 173, 4);
+    margin:10px auto;
+}
+
+.console {
+    height: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #37373792;
+    border-radius: 4px;
+}
+.console p {
+    margin: 0;
+    
+    font-weight: 400;
+}
+.success {
+    color: #07c400;
+}
+.warning {
+    color: #ffc107;
+}
+.error {
+    color: #dc3545;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    
+    body {
+        padding: 10px;
+        margin: auto;
+    }
+    .container {
+        padding: 10px;
+    }
+
+    .entry-form input,
+    .entry-form button,
+    .monthly-list h2,
+    #monthly-entries th,
+    #monthly-entries td,
+    .center-box input,
+    .center-box button,
+    .console {
+        font-size: 14px;
+    }
+}
