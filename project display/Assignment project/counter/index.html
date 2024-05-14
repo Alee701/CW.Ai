@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter App</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div class="container">
+        <div class="counter-box" id="counterBox">
+          <img src="background.png" alt="Counter" class="counter-image">
+          <div class="counter-overlay">
+            <div class="digit-box"><p>0</p></div>
+            <div class="digit-box"><p>0</p></div>
+            <div class="digit-box"><p>0</p></div>
+            <div class="digit-box"><p>0</p></div>
+            <div class="digit-box"><p>0</p></div>
+            <div class="digit-box"><p>0</p></div>
+        </div>
+    </div>
+    <div class="even-odd" id="evenOdd"></div>
+        <div class="buttons">
+          <button class="rounded-button" onclick="increment()">+</button>
+          <button class="rounded-button" onclick="reset()">Reset</button>
+          <button class="rounded-button" onclick="saveHistory()">Save History</button>
+        </div>
+        <div class="history-container">
+          <h3>History</h3>
+          <div class="history" id="history">
+            <table id="historyTable">
+              <thead>
+                <tr>
+                  <th>Count</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody id="historyBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
