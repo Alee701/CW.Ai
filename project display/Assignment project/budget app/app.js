@@ -18,7 +18,7 @@ function addEntry() {
     // Calculate saving
     let saving;
     if (transactionType === 'income') {
-        saving = revenue;
+        saving = revenue - expense; // Adjusted calculation
     } else if (transactionType === 'expense') {
         saving = -expense;
     }
