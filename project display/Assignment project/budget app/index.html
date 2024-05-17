@@ -17,8 +17,8 @@
         <div class="entry-form">
             <label style="color: white; margin-left: 7px;" for="month">Select Month: </label>
             <input type="month" id="month" placeholder="Month">
-            <input type="number" id="revenue" placeholder="Revenue (PKR)">
-            <input type="number" id="expense" placeholder="Expense (PKR)">
+            <input type="number" id="revenue" placeholder="Revenue (USD)">
+            <input type="number" id="expense" placeholder="Expense (USD)">
             
             <button onclick="addEntry()">Add Entry</button>
         </div>
@@ -29,19 +29,19 @@
                     <tr>
                         <th>Transaction Type</th>
                         <th>Month</th>
-                        <th>Revenue (PKR)</th>
-                        <th>Expense (PKR)</th>
-                        <th>Saving (PKR)</th>
+                        <th>Revenue (USD)</th>
+                        <th>Expense (USD)</th>
+                        <th>Saving (USD)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Monthly entries will be dynamically added here -->
+                   
                 </tbody>
             </table>
         </div>
         <div class="console" id="console-messages"></div>
         <div class="center-box">
-            <input type="number" id="total-saving" placeholder="Total Saving (PKR)" disabled>
+            <input type="number" id="total-saving" placeholder="Total Saving (USD)" disabled>
             <button class="export" onclick="exportToCSV()">Export as CSV</button>
         </div>
     </div>

@@ -18,7 +18,7 @@ function addEntry() {
     // Calculate saving
     let saving;
     if (transactionType === 'income') {
-        saving = revenue - expense; // Adjusted calculation
+        saving = revenue - expense; // Adjusted calculation to deduct expenses
     } else if (transactionType === 'expense') {
         saving = -expense;
     }
@@ -40,6 +40,7 @@ function addEntry() {
     renderMonthlyList();
     calculateTotalSaving();
 }
+
 
 function renderMonthlyList() {
     const tbody = monthlyEntriesTable.querySelector('tbody');
@@ -73,9 +74,9 @@ function calculateTotalSaving() {
 
     // Console message based on total saving
     if (totalSaving > 0) {
-        showMessage('Congratulations! You have saved: ' + totalSaving.toFixed(2) + ' PKR', 'success');
+        showMessage('Congratulations! You have saved: ' + totalSaving.toFixed(2) + ' USD', 'success');
     } else if (totalSaving < 0) {
-        showMessage('Warning! You are in debt: ' + totalSaving.toFixed(2) + ' PKR', 'warning');
+        showMessage('Warning! You are in debt: ' + totalSaving.toFixed(2) + ' USD', 'warning');
     } else {
         showMessage('You have neither saved nor spent anything.', 'error');
     }

@@ -110,11 +110,10 @@ input[type="month"] {
 }
 
 
-
 #total-saving {
-    font-size: 15px;
+    font-size: 25px;
     margin: auto;
-    color: #fff;
+    color: white;
     background-color: #333;
     font-weight: bold;
     text-align: center;
