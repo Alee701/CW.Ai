@@ -1,6 +1,24 @@
 body {
-    background-color: #333;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
+.contain {
+    background-color: rgba(255, 255, 255, 0.538);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 5%;
+}
+
 h1 { 
     padding-top: 40px; 
     padding-bottom: 10px; 
@@ -19,13 +37,14 @@ section {
     padding: 5%; 
     padding-top: 0; 
     height: 100vh; 
+    ;
 } 
 
 .side { 
     margin-left: 0; 
 } 
 
-button { 
+button, input, select, option { 
     margin: 10px; 
     border-color: #ff0101c5 !important; 
     color: white !important;
@@ -44,8 +63,12 @@ button:hover {
     border-color: #c04848; 
     border-width: thick; 
     background-color: rgb(35, 35, 35);
-    color: aliceblue    ;
+    
 } 
+.textarea {
+   margin: auto;
+    
+}
 
 .flex-box { 
     display: flex; 

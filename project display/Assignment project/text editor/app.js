@@ -1,116 +1,62 @@
-function execCommand(command, value = null) {
-    document.execCommand(command, false, value);
-}
-
 function toggleBold() {
-    execCommand("bold");
+    let textarea = document.getElementById("textarea1");
+    if (textarea.style.fontWeight === "bold") {
+        textarea.style.fontWeight = "normal";
+    } else {
+        textarea.style.fontWeight = "bold";
+    }
 }
 
 function toggleItalic() {
-    execCommand("italic");
+    let textarea = document.getElementById("textarea1");
+    if (textarea.style.fontStyle === "italic") {
+        textarea.style.fontStyle = "normal";
+    } else {
+        textarea.style.fontStyle = "italic";
+    }
 }
 
 function toggleUnderline() {
-    execCommand("underline");
+    let textarea = document.getElementById("textarea1");
+    if (textarea.style.textDecoration === "underline overline") {
+        textarea.style.textDecoration = "none";
+    } else {
+        textarea.style.textDecoration = "underline overline";
+    }
 }
 
 function LAlign() {
-    execCommand("justifyLeft");
+    document.getElementById("textarea1").style.textAlign = "left";
 }
 
 function CAlign() {
-    execCommand("justifyCenter");
+    document.getElementById("textarea1").style.textAlign = "center";
 }
 
 function RAlign() {
-    execCommand("justifyRight");
+    document.getElementById("textarea1").style.textAlign = "right";
 }
 
 function UpperLine() {
-    let selection = window.getSelection().toString();
-    if (selection) {
-        execCommand("insertText", selection.toUpperCase());
-    }
+    document.getElementById("textarea1").style.textTransform = "uppercase";
 }
 
-function Lowerline() {
-    let selection = window.getSelection().toString();
-    if (selection) {
-        execCommand("insertText", selection.toLowerCase());
-    }
+function LowerLine() {
+    document.getElementById("textarea1").style.textTransform = "lowercase";
 }
 
-function changeFontColor() {
-    const color = document.getElementById("fontColor").value;
-    execCommand("foreColor", color);
+function changeFontSize(size) {
+    document.getElementById("textarea1").style.fontSize = size;
 }
 
-function changeBgColor() {
-    const color = document.getElementById("bgColor").value;
-    execCommand("hiliteColor", color);
+function changeFontColor(color) {
+    document.getElementById("textarea1").style.color = color;
 }
 
-function changeFontSize() {
-    const size = document.getElementById("fontSize").value;
-    execCommand("fontSize", size);
+function changeBgColor(color) {
+    document.getElementById("textarea1").style.backgroundColor = color;
 }
 
-function resetFormatting() {
-    const textarea = document.getElementById("textarea1");
-    textarea.innerHTML = textarea.innerText;
+function changeFontFamily(font) {
+    document.getElementById("textarea1").style.fontFamily = font;
 }
-
-function copyText() {
-    execCommand("copy");
-}
-
-function cutText() {
-    execCommand("cut");
-}
-
-function pasteText() {
-    execCommand("paste");
-}
-
-function saveText() {
-    const text = document.getElementById("textarea1").innerHTML;
-    const blob = new Blob([text], { type: 'text/html' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'text.html';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-
-function loadText() {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = 'text/html';
-    input.onchange = e => {
-        const file = e.target.files[0];
-        const reader = new FileReader();
-        reader.onload = event => {
-            document.getElementById("textarea1").innerHTML = event.target.result;
-            updateWordCount();
-        };
-        reader.readAsText(file);
-    };
-    input.click();
-}
-
-function undoAction() {
-    execCommand('undo');
-}
-
-function redoAction() {
-    execCommand('redo');
-}
-
-function updateWordCount() {
-    const text = document.getElementById("textarea1").innerText;
-    const wordCount = text.trim().split(/\s+/).filter(word => word.length > 0).length;
-    document.getElementById("wordCount").innerText = "Word Count: " + wordCount;
-}
-
-document.getElementById("textarea1").addEventListener("input", updateWordCount);
