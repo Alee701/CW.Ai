@@ -1,0 +1,153 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(199, 199, 199, 0.493);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+  }
+  
+
+h1 {
+    
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    background-color: orangered;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  
+  .date-picker,
+  .totals,
+  .export-buttons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .date-picker label {
+    margin-right: 10px;
+    
+  }
+
+  .date-display {
+    margin-left: 20px;
+  }
+  
+  
+  .totals span {
+    margin-right: 20px;
+  }
+  
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #4d4d4d;
+  }
+  
+  td {
+    padding: 5px 15px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007BFF;
+    color: aliceblue;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: large;
+
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  button#previous-day, button#next-day {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+  }
+  
+  button#previous-day:hover, button#next-day:hover {
+    background-color: #0056b3;
+  }
+  
+  button#export-weekly, button#export-monthly {
+    background-color: #28A745;
+    color: white;
+    border: none;
+  }
+  
+  button#export-weekly:hover, button#export-monthly:hover {
+    background-color: #218838;
+  }
+  
+  .attendance-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .attendance-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .attendance-btn.present {
+    background-color: #007bff; /* Blue */
+  }
+  
+  .attendance-btn.absent {
+    background-color: #dc3545; /* Red */
+  }
+  
+  .attendance-btn.leave {
+    background-color: #ff9900; /* Green */
+  }
+  
+  @media (max-width: 768px) {
+    header, .totals, .export-buttons, .date-picker {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    table, th, td {
+      font-size: 14px;
+    }
+  }
+  

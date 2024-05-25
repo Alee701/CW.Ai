@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <header>
+              <h1>Attendance App</h1>
+              <div class="date-picker">
+                <label for="attendance-date">Select Date:</label>
+                <input type="date" id="attendance-date">
+                <div id="date-display" class="date-display">
+                    Data for: <span id="displayed-date"></span>
+                  </div>
+              </div>
+             <div class="inner">
+              <div class="totals">
+                <span id="total-present">Present: 0</span>
+                <span id="total-absent">Absent: 0</span>
+                <span id="total-leave">Leave: 0</span>
+                <span id="total-students">Total Students: 0</span>
+              </div>
+              <div class="export-buttons">
+                <button id="export-weekly">Export Weekly</button>
+                <button id="export-monthly">Export Monthly</button>
+              </div>
+            </div>
+            </header>
+            <main>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Father's Name</th>
+                    <th>Class</th>
+                    <th>Attendance</th>
+                  </tr>
+                </thead>
+                <tbody id="attendance-table-body">
+                  <!-- Rows will be populated by JavaScript -->
+                </tbody>
+              </table>
+            </main>
+            <footer>
+              <button id="previous-day">Previous Day</button>
+              <button id="save-and-next-day">Save and Next Day</button>
+              <button id="next-day">Next Day</button>
+            </footer>
+          </div>
+    <script src="app.js"></script>
+</body>
+</html>
