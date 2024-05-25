@@ -44,8 +44,16 @@ h1 {
     
   }
 
+  .date-picker {
+    background-color: rgba(0, 0, 0, 0.608);
+    padding: 10px 0;
+    padding-left: 20px;
+    color: aliceblue;
+  }
+
   .date-display {
     margin-left: 20px;
+    text-align: end;
   }
   
   
@@ -58,6 +66,14 @@ h1 {
     justify-content: space-between;
     padding: 0 20px;
     align-items: center;
+  }
+   input {
+    padding: 5px;
+    background-color: grey;
+    color: aliceblue;
+    font-size: large;
+    font-family: Arial, sans-serif;
+    padding-left: 10px;
   }
   table {
     width: 100%;
