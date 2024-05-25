@@ -55,7 +55,47 @@ h1 {
     margin-left: 20px;
     text-align: end;
   }
-  
+
+  .totals {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.608);
+    padding: 10px 20px;
+    padding-left: 20px;
+    color: aliceblue;
+    font-size: 2.5vh;
+  }
+
+
+  #total-present {
+    background-color: #007BFF;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+
+#total-absent {
+    background-color: #dc3545;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+
+#total-leave {
+    background-color: #ff9900;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+
+#total-students {
+    background-color: #28A745;
+    padding: 10px;
+    border-radius: 2px;
+  }
   
   .totals span {
     margin-right: 20px;
@@ -64,7 +104,6 @@ h1 {
   .inner {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
     align-items: center;
   }
    input {
