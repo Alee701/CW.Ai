@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/57fbb9a21d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ALI IMRAN</div>
+        <nav>
+            <ul id="desktop-nav">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" id="login-btn">Login</a></li>
+                <li><a href="#" id="logout-btn" style="display: none;">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-nav">
+            <button id="nav-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" style="display: none;">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" id="mobile-login-btn">Login</a></li>
+            <li><a href="#" id="mobile-logout-btn" style="display: none;">Logout</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section id="intro">
+            <video autoplay muted loop id="bg-video">
+                <source src="main web assets/background video.mp4" type="video/mp4">
+            </video>
+            <div class="intro-text">
+                <h1>Welcome to My SMIT Projects</h1>
+                <p>Hello, My name is Ali Imran and I am a front-end Developer.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search projects...">
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn html" data-category="html"><i class="fa-brands fa-html5" style="color: #ff6600;"></i> HTML</button>
+                <button class="filter-btn css" data-category="css"><i class="fa-brands fa-css3-alt" style="color: #005eff;"></i></i> CSS</button>
+                <button class="filter-btn javascript" data-category="javascript"><i class="fa-brands fa-js" style="color: #fff700;"></i> JavaScript</button>
+                <button id="add-project-btn" style="display: none;"><i class="fa-solid fa-plus"></i> Add Project</button>
+            </div>
+
+            <div id="projects-container">
+                <p id="no-projects-message">No projects available, please add some projects.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Code with Ali Imran. | All rights reserved.</p>
+    </footer>
+
+    <div id="project-form-popup" class="popup">
+        <form id="project-form">
+            <span class="close-popup">&times;</span>
+            <h2 class="login-head">Add Project</h2>
+            <label for="project-title">Title:</label>
+            <input type="text" id="project-title" required>
+            <label for="project-description">Description:</label>
+            <textarea id="project-description" required></textarea>
+            <label for="project-category">Category:</label>
+            <select id="project-category">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+            <label for="project-link">Project Link:</label>
+            <input type="url" id="project-link" required>
+            <label for="github-link">GitHub Link:</label>
+            <input type="url" id="github-link" required>
+            <button type="submit" class="filter-btn pop">Add Project</button>
+        </form>
+    </div>
+
+    <div id="login-popup" class="popup">
+        <form id="login-form">
+            <span class="close-popup"><p>&times;</p></span>
+            <h1 class='login-head'>Login</h1><br><hr><p class="login-head">Ownership Ali Imran</p><br>
+            <label for="username"></label>
+            <input type="text" id="username" placeholder="username" required>
+            <label for="password"></label>
+            <input type="password" id="password" placeholder="password" required>
+            <button type="submit" class="filter-btn pop">Login</button>
+        </form>
+    </div>
+
+    <script defer src="app.js"></script>
+</body>
+</html>
