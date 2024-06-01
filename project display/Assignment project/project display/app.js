@@ -82,23 +82,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const title = document.getElementById('project-title').value;
         const description = document.getElementById('project-description').value;
         const category = document.getElementById('project-category').value;
-        const projectFile = document.getElementById('project-file').files[0];
         const githubLink = document.getElementById('github-link').value;
 
-        if (projectFile) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const projectLink = e.target.result;
-                const project = { title, description, category, projectLink, githubLink };
-                projects.push(project);
-                localStorage.setItem('projects', JSON.stringify(projects));
-                displayProjects(projects);
-                projectFormPopup.style.display = 'none';
-            };
-            reader.readAsDataURL(projectFile);
-        } else {
-            alert('Please upload a project file.');
-        }
+        // Generate the project link based on the title
+        const projectLink = `projects/${title.toLowerCase().replace(/ /g, '-')}/index.html`;
+
+        const project = { title, description, category, projectLink, githubLink };
+        projects.push(project);
+        localStorage.setItem('projects', JSON.stringify(projects));
+        displayProjects(projects);
+        projectFormPopup.style.display = 'none';
+        document.getElementById('project-form').reset();
     }
 
     function login() {
@@ -169,16 +163,16 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('project-title').value = project.title;
         document.getElementById('project-description').value = project.description;
         document.getElementById('project-category').value = project.category;
-        document.getElementById('project-link').value = project.projectLink;
         document.getElementById('github-link').value = project.githubLink;
         projectFormPopup.style.display = 'block';
         document.getElementById('project-form').onsubmit = function(e) {
             e.preventDefault();
+            const updatedProjectLink = `projects/${document.getElementById('project-title').value.toLowerCase().replace(/ /g, '-')}/index.html`;
             projects[index] = {
                 title: document.getElementById('project-title').value,
                 description: document.getElementById('project-description').value,
                 category: document.getElementById('project-category').value,
-                projectLink: document.getElementById('project-link').value,
+                projectLink: updatedProjectLink,
                 githubLink: document.getElementById('github-link').value,
             };
             localStorage.setItem('projects', JSON.stringify(projects));
