@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function login() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
-        if (username === 'ADMIN' && password === 'yourpassword') {
+        if (username === 'ADMIN' && password === 'Ali786786@') {
             loggedIn = true;
             addProjectBtn.style.display = 'inline-block';
             logoutBtn.style.display = 'inline-block';
