@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    
+}
+header {
+    width: 100%;
+    background-color: #fff;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 40px;
+    margin: 25px 0 0px 40px;
+}
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 95%;
+    margin: 20px 0;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.card-content p {
+    margin: 0 0 10px 0;
+    color: #777;
+}
+
+.card-content .price {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content .quantity {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.card-details {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+}
+
+.card:hover .card-details {
+    display: block;
+}
+
+.card-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    gap: 5px;
+}
+
+.card:hover .card-buttons {
+    display: flex;
+}
+
+.card-buttons button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-buttons button:hover {
+    background-color: #0056b3;
+}
+
+button#add-card {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button#add-card:hover {
+    background-color: #0056b3;
+}
