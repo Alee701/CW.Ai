@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="logout-button" id="logout">Logout</button>
+    <div class="profile-container">
+        <div class="profile-header">
+            <h2>Admin View</h2>
+            <div class="user-switch-buttons">
+                <button class="switch-user-button" data-user="user1">User 1</button>
+                <button class="switch-user-button" data-user="user2">User 2</button>
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="profile-image">
+                <img src="default-profile.png" alt="User Profile Picture">
+            </div>
+            <div class="profile-bio">
+                <h3>User Name</h3>
+                <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget metus quis elit dignissim hendrerit.</p>
+            </div>
+        </div>
+    </div>
+    <button id="back-button">Back</button>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('userRole');
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('back-button').addEventListener('click', function() {
+            window.history.back();
+        });
+
+        const switchButtons = document.querySelectorAll('.switch-user-button');
+        switchButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const user = this.getAttribute('data-user');
+                window.location.href = `${user}.html`;
+            });
+        });
+    </script>
+</body>
+</html>
